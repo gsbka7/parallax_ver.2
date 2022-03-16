@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Gloria Hallelujah', cursive;
+    
+}
+
+header{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+}
+
+.universe{
+    z-index: 18;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.earth{
+    z-index: 19;
+    position: absolute;
+    bottom: -100px;
+    left: -150px;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.astronaut{
+    z-index: 20;
+    position: absolute;
+    bottom: -200px;
+    width: 100%;
+    height: 90vh;
+    
+}
+
+nav{
+    z-index: 30;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 50px;
+    background: linear-gradient(to bottom, #181717, transparent)
+
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo{
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+}
+
+.logo span{
+    font-weight: 300;
+
+}
+
+.hamburger-meun{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+}
+
+.bar{
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background-color: #FFF;
+    border-radius: 2px;
+    
+}
+
+.bar:before, .bar:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 5px;
+    background-color: #FFF;
+    border-radius: 2px;
+
+}
+
+.bar:before{
+    transform: translateY(-15px);
+}
+
+.bar:after{
+    transform: translateY(15px);
+}
+
+.index-title{
+    z-index: 30;
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+    text-align: center;
+    color: rgb(112, 91, 110);
+    font-size: 200px;
+    font-weight: 600;
+
+}
+
+section{ 
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(46, 44, 44);
+    padding: 0 100px;
+
+}
+
+section .container{
+    min-height: 100vh;
+    padding: 0 30px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+
+}
+
+section img{
+    width: 100%;
+
+}
+
+.content{
+    color: #FFF;
+
+}
+
+.title{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.border{
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    background-color: #FFF;
+    bottom: 0;
+    left: 0;
+}
+
+.shadow{
+    z-index: 20;
+    position: absolute;
+    bottom: 100%;
+    left:0;
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(to top, #151515, transparent)
+    
+}
