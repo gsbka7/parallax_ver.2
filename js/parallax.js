@@ -1,3 +1,4 @@
+
 const translate = document.querySelectorAll('.translate');
 const index_title = document.querySelector('.index-title');
 const header = document.querySelector('header');
