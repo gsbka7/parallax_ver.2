@@ -133,7 +133,7 @@ nav .container{
     bottom: 50%;
     width: 100%;
     text-align: center;
-    color: rgb(235, 235, 235);
+    color: rgb(255, 255, 255);
     font-size: 150px;
     font-weight: 600;
 
@@ -261,8 +261,6 @@ section img{
     }
 
     section .container{
-    
-
         padding: 0px 35px;
         font-size: 17px;
         letter-spacing: 1px;
