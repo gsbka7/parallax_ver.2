@@ -69,11 +69,19 @@ nav .container{
 }
 
 .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #FFF;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 2px;
+    gap: 15px
 
+}
+
+.logo img{
+    width: 50px;
 }
 
 .logo span{
@@ -125,7 +133,7 @@ nav .container{
     bottom: 50%;
     width: 100%;
     text-align: center;
-    color: rgb(112, 91, 110);
+    color: rgb(235, 235, 235);
     font-size: 150px;
     font-weight: 600;
 
@@ -229,5 +237,76 @@ section img{
         font-size: 70px;
         bottom: 65%;
     }
+    
+}
+
+@media (max-width: 360px) {
+    nav{
+        padding: 10px 15px;
+    
+    }
+    .index-title{
+        font-size: 60px;
+        bottom: 60%;
+    }
+
+    .logo{
+        font-size: 20px;
+        gap: 8px
+    
+    }
+    
+    .logo img{
+        width: 40px;
+    }
+
+    section .container{
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        padding: 0px 100px;
+        font-size: 17px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        gap: 0px;
+    
+    }
+    
+    section img{
+        width: 100%;
+    
+    }
+    
+    .content{
+        color: #FFF;
+        transform: translateY(-50px);
+    
+    }
+    
+    .imgContainer{
+        transform: translateY(50px);
+    
+    }
+    
+    .title{
+        position: relative;
+        font-size: 18px;
+        font-weight: 600;
+        
+    }
+    
+    .border{
+        position: absolute;
+        width: 0 ;
+        height: 3px;
+        background-color: #FFF;
+        bottom: 0;
+        left: 0;
+    }
+    
+    
+
     
 }
