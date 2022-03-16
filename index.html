@@ -9,7 +9,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
-        </style>
+    </style>
 
     <link rel="stylesheet" href="./css/parallax.css">
 
@@ -27,44 +27,68 @@
                     <div class="bar"></div>
                 </div>
             </div>
-
         </nav>
-            <h1 class="index-title">Astronaut.</h1>
+        <h1 class="index-title translate" data-speed="0.8">Astronaut.</h1>
 
-            <img src="./img/universe.png" class="universe translate" data-speed ="-0.1" alt="">
-            <img src="./img/earth.png" class="earth translate" data-speed ="0.6" alt="">
-            <img src="./img/astronaut.png" class="astronaut translate" data-speed ="0.2" alt="">
+        <img src="./img/universe.png" class="universe translate" data-speed="-0.1" alt="">
+        <img src="./img/earth.png" class="earth translate" data-speed="0.6" alt="">
+        <img src="./img/astronaut.png" class="astronaut translate" data-speed="0.2" alt="">
     </header>
 
     <section>
         <div class="shadow"></div>
-        <div class="container">
+        <div class="container opacity">
             <div class="content">
                 <div class="title">SATELLITES
-                    <div class="border"></div>
+                    <div class="border"></div>50
                 </div>
                 <p class="text">Starship is designed to deliver satellites further and at a lower marginal cost per
                     launch than our current Falcon vehicles. With a payload compartment larger than any fairing
                     currently in operation or development, Starship creates possibilities for new missions, including
                     space telescopes even larger than the James Webb.</p>
             </div>
-        </div>
-        <div class="imgContainer">
-            <img src="./img/lander.jpg" alt="">
+            <div class="imgContainer opacity">
+                <img class="imgg" src="./img/lander.jpg" alt="">
+            </div>
         </div>
     </section>
 
     <script>
-        const translateElement = document.querySelectorAll('.translate')
+        const translate = document.querySelectorAll('.translate');
+        const index_title = document.querySelector('.index-title');
+        const header = document.querySelector('header');
+        const shadow = document.querySelector('.shadow');
+        const content = document.querySelector('.content');
+        const section = document.querySelector('section');
+        const img_container = document.querySelector('.imgContainer');
+        const opacity = document.querySelectorAll('.opacity');
+        const border = document.querySelector('.border')
 
-        window.addEventListener('scroll', () =>{
+        let header_height = header.offsetHeight;
+        let section_height = section.offsetHeight;
+
+        window.addEventListener('scroll', () => {
             let scroll = window.pageYOffset;
-            
-            translateElement.forEach(element =>{
+            let sectionY = section.getBoundingClientRect();
+
+
+            translate.forEach(element => {
                 let speed = element.dataset.speed;
                 element.style.transform = `translateY(${scroll * speed}px)`
-            })
-        })
+            });
+
+            opacity.forEach(element => {
+                element.style.opacity = scroll / (sectionY.top + section_height);
+            });
+
+            index_title.style.opacity = - scroll / (header_height / 2) + 1;
+
+            shadow.style.height = `${scroll * 0.5 + 300}px`;
+            content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
+            img_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
+
+            border.style.width = `${scroll / (sectionY.top +section_height) *40}%`
+        });
     </script>
 
 </body>
