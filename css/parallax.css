@@ -261,52 +261,13 @@ section img{
     }
 
     section .container{
-        min-height: 100vh;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        justify-content: center;
-        padding: 0px 100px;
+    
+
+        padding: 0px 35px;
         font-size: 17px;
         letter-spacing: 1px;
         line-height: 25px;
         gap: 0px;
     
     }
-    
-    section img{
-        width: 100%;
-    
-    }
-    
-    .content{
-        color: #FFF;
-        transform: translateY(-50px);
-    
-    }
-    
-    .imgContainer{
-        transform: translateY(50px);
-    
-    }
-    
-    .title{
-        position: relative;
-        font-size: 18px;
-        font-weight: 600;
-        
-    }
-    
-    .border{
-        position: absolute;
-        width: 0 ;
-        height: 3px;
-        background-color: #FFF;
-        bottom: 0;
-        left: 0;
-    }
-    
-    
-
-    
 }
